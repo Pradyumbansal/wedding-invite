@@ -123,7 +123,7 @@ export const INVITATION = {
       time: "11:00 AM",
       theme: "RANGI SAARI",
       dressCode: "GOLD & IVORY",
-      image: "/images/wardrobe-2.png",
+      image: "/images/wardrobe-haldi.jpg",
       palette: ["#D4AF37", "#F3E9D2", "#FAF6F0", "#B8860B"],
     },
     {
@@ -133,7 +133,7 @@ export const INVITATION = {
       time: "7:00 PM",
       theme: "BOOGIE WOOGIE",
       dressCode: "CHATAK CHAMKEELA",
-      image: "/images/wardrobe-3.svg",
+      image: "/images/wardrobe-sangeet.jpg",
       palette: ["#E0115F", "#FF7A00", "#00A0B0", "#FFD700"],
     },
     {
@@ -143,7 +143,7 @@ export const INVITATION = {
       time: "12:00 PM",
       theme: "LAGAN LAAGI RE",
       dressCode: "SASSY & CLASSY",
-      image: "/images/wardrobe-1.svg",
+      image: "/images/wardrobe-wedding.jpg",
       palette: ["#5C1A1B", "#1B3B2B", "#D4AF37", "#262626"],
     },
   ],
