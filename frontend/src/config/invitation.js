@@ -117,31 +117,34 @@ export const INVITATION = {
 
   wardrobe: [
     {
-      id: "mehandi",
-      event: "MEHANDI & HALDI",
-      tag: "STYLE GUIDE",
+      id: "haldi",
+      event: "HALDI & MEHNDI",
+      date: "24 OCTOBER, 2026",
+      time: "11:00 AM",
+      theme: "RANGI SAARI",
+      dressCode: "GOLD & IVORY",
       image: "/images/wardrobe-2.png",
-      palette: ["#F2C14E", "#E07A5F", "#7A9E7E", "#FAF6F0"],
-      suggestion:
-        "Bright, playful festive wear — sunny yellows, marigold oranges and fresh greens feel right at home among the haldi and flowers.",
+      palette: ["#D4AF37", "#F3E9D2", "#FAF6F0", "#B8860B"],
     },
     {
-      id: "cocktail",
-      event: "COCKTAIL & RING CEREMONY",
-      tag: "STYLE GUIDE",
+      id: "sangeet",
+      event: "SANGEET",
+      date: "24 OCTOBER, 2026",
+      time: "7:00 PM",
+      theme: "BOOGIE WOOGIE",
+      dressCode: "CHATAK CHAMKEELA",
       image: "/images/wardrobe-3.svg",
-      palette: ["#1B3B2B", "#5C1A1B", "#B8860B", "#262626"],
-      suggestion:
-        "Elegant evening glamour — Indo-western silhouettes, flowing gowns, bandhgalas and deep jewel tones under the lights.",
+      palette: ["#E0115F", "#FF7A00", "#00A0B0", "#FFD700"],
     },
     {
       id: "wedding",
-      event: "BARAAT & PHERE",
-      tag: "STYLE GUIDE",
+      event: "WEDDING",
+      date: "25 OCTOBER, 2026",
+      time: "12:00 PM",
+      theme: "LAGAN LAAGI RE",
+      dressCode: "SASSY & CLASSY",
       image: "/images/wardrobe-1.svg",
-      palette: ["#B91C1C", "#D4AF37", "#FAF6F0", "#1B3B2B"],
-      suggestion:
-        "Traditional wedding attire — silk sarees, sherwanis and heirloom jewellery in classic reds, ivories and temple gold.",
+      palette: ["#5C1A1B", "#1B3B2B", "#D4AF37", "#262626"],
     },
   ],
 };

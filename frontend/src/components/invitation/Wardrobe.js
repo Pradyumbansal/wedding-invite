@@ -9,7 +9,7 @@ export default function Wardrobe() {
           <SectionHead
             eyebrow="WHAT TO WEAR"
             title="Dress for the Celebration"
-            sub="A gentle style guide, never a dress code — wear what makes you feel celebratory."
+            sub="Themes, timings and colours for each celebration — a little wardrobe planner to help you pack."
           />
         </Reveal>
 
@@ -25,10 +25,13 @@ export default function Wardrobe() {
                     className="aspect-square w-full object-cover"
                   />
                 </div>
-                <p className="font-label mt-6 text-center text-[9px] text-[#D4AF37]">{w.tag}</p>
+                <p className="font-label mt-6 text-center text-[9px] text-[#D4AF37]">{w.date}</p>
                 <h3 className="font-name mt-2 text-center text-sm tracking-[0.14em] text-[#1B3B2B] sm:text-base">
                   {w.event}
                 </h3>
+                <p className="font-display mt-2 text-center text-base text-[#525252]">
+                  {w.time} <span className="text-[#D4AF37]">|</span> {w.theme}
+                </p>
                 <div className="mt-4 flex items-center justify-center gap-2">
                   {w.palette.map((c) => (
                     <span
@@ -39,8 +42,8 @@ export default function Wardrobe() {
                     />
                   ))}
                 </div>
-                <p className="font-display mt-4 px-1 pb-2 text-center text-base italic leading-relaxed text-[#525252]">
-                  {w.suggestion}
+                <p className="font-label mt-auto pt-4 pb-2 text-center text-[10px] leading-relaxed text-[#B8860B]">
+                  | {w.dressCode} |
                 </p>
               </div>
             </Reveal>
