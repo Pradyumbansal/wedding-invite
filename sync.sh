@@ -23,5 +23,11 @@ cp -a "$TMP/repo/frontend/src" /app/frontend/
 cp -a "$TMP/repo/frontend/public/." /app/frontend/public/
 cp -a "$TMP/repo/backend/." /app/backend/
 
-echo "Done. The frontend dev server hot-reloads on its own."
-echo "If backend/server.py changed, restart it:  sudo supervisorctl restart backend"
+# Replacing frontend/src breaks webpack's inode watches, so the dev server must
+# be restarted or it will keep serving the previous bundle.
+echo "Restarting services ..."
+sudo supervisorctl restart frontend backend || \
+  echo "Could not restart automatically — run: sudo supervisorctl restart frontend backend"
+
+echo
+echo "Done. Give the frontend ~30-60s to recompile, then hard-refresh (Ctrl+Shift+R)."
