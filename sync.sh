@@ -12,7 +12,7 @@ TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
 echo "Fetching latest from $REPO ..."
-git clone --depth 1 --quiet "$REPO" "$TMP/repo"
+git clone --depth 1 --branch main --quiet "$REPO" "$TMP/repo"
 
 echo "Updating /app ..."
 # Replace src outright so deleted/renamed files don't linger.
