@@ -1,0 +1,181 @@
+{
+  "project_metadata": {
+    "title": "Arushi & Piyush Digital Wedding Invitation",
+    "couple": "ARUSHI & PIYUSH",
+    "wedding_date": "Sunday, October 25, 2026",
+    "venue": "Hotel Trident, Agra",
+    "app_type": "mobile_web_app",
+    "primary_language": "English with Traditional Sanskrit Invocation"
+  },
+  "design_identity": {
+    "persona": "E1 The Anti-AI Designer",
+    "archetype": "Organic & Earthy Luxury Editorial",
+    "aesthetic_direction": "An elegant South Indian-inspired watercolour wedding invitation blended with a premium contemporary editorial website. Warm ivory paper background, watercolour botanical illustrations (banana leaves, marigold garlands, jasmine strings, temple bells), subtle gold accents, deep forest green, saffron/marigold orange, vermillion red, and deep charcoal typography.",
+    "theme": "Light mode paper texture priority. Soft ivory background (#FAF6F0) with rich warm accents."
+  },
+  "color_system": {
+    "background_primary": "#FAF6F0",
+    "background_card": "#FDFBF7",
+    "background_paper_texture": "linear-gradient(135deg, #FAF6F0 0%, #F5EFE6 100%)",
+    "text_primary": "#262626",
+    "text_secondary": "#525252",
+    "text_gold": "#B8860B",
+    "accent_gold": "#D4AF37",
+    "accent_forest_green": "#1B3B2B",
+    "accent_marigold_orange": "#E07A5F",
+    "accent_saffron_yellow": "#D97706",
+    "accent_vermillion_red": "#B91C1C",
+    "border_gold_subtle": "rgba(212, 175, 55, 0.35)",
+    "border_ivory_dark": "#E6DEC3",
+    "overlay_glass": "rgba(253, 251, 247, 0.85)"
+  },
+  "typography": {
+    "google_fonts": [
+      "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    ],
+    "headings": {
+      "font_family": "'Cormorant Garamond', 'Cinzel', serif",
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-serif tracking-wide leading-tight text-[#1B3B2B]",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-serif tracking-wider text-[#1B3B2B] text-center",
+      "h3_card": "text-xl sm:text-2xl font-serif font-semibold text-[#262626]",
+      "sanskrit_invocation": "font-serif text-xs sm:text-sm tracking-[0.3em] uppercase text-[#B8860B] font-semibold"
+    },
+    "body": {
+      "font_family": "'Cormorant Garamond', serif for narrative, 'Montserrat', sans-serif for UI labels",
+      "paragraph": "text-base sm:text-lg font-serif leading-relaxed text-[#404040]",
+      "small_label": "text-xs uppercase tracking-[0.25em] font-sans font-medium text-[#B8860B]"
+    }
+  },
+  "layout_and_grid": {
+    "container_max_width": "max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-20",
+    "card_padding": "p-6 sm:p-10",
+    "spacing_scale": "p-4, p-6, p-8, p-12, p-16, p-20",
+    "mobile_first": true,
+    "bento_strategy": "Asymmetric editorial cards with delicate gold borders, inner double-lined borders, and soft warm box shadows (shadow-[0_10px_30px_rgba(27,59,43,0.06)])"
+  },
+  "section_specifications": {
+    "1_hero": {
+      "title": "Cinematic Invocation Hero",
+      "elements": [
+        "|| SHREE GANESHAY NAMAH || header invocation in gold foil typography",
+        "Couples Names: ARUSHI & PIYUSH with generous tracking and elegant serif hierarchy",
+        "Wedding Date: Sunday, October 25, 2026",
+        "Venue: Hotel Trident, Agra",
+        "Framed Couple Portrait Placeholder surrounded by watercolor floral motif border",
+        "SCROLL TO BEGIN animated indicator with subtle bounce and gold line",
+        "Floating ♪ Music Toggle Button (fixed bottom-right or top-right)"
+      ]
+    },
+    "2_invitation_card": {
+      "title": "Formal Invitation Card",
+      "elements": [
+        "Header: 'WITH JOY IN OUR HEARTS'",
+        "Formal invitation prose inviting guests to celebrate the union of Arushi Sharma & Piyush Verma",
+        "Ivory paper texture background with marigold border motifs and golden corner accents",
+        "Parents and family blessings: 'Warmly invited by Sharma & Verma Families'"
+      ]
+    },
+    "3_countdown": {
+      "title": "Live Countdown Timer",
+      "elements": [
+        "Header: 'UNTIL WE SAY I DO'",
+        "Live JavaScript timer counting down to October 25, 2026 10:00:00 AM IST",
+        "Large elegant serif numerals for Days, Hours, Minutes, Seconds",
+        "Subtle metallic shimmer or floral wreath framing the timer grid"
+      ]
+    },
+    "4_our_story": {
+      "title": "Our Story Horizontal Carousel",
+      "elements": [
+        "Header: 'OUR LOVE STORY'",
+        "Swipeable/Draggable horizontal carousel of 6 cards:",
+        "Card 1: 'First Connection' - Coffee in Delhi, 2021",
+        "Card 2: 'The First Trip' - Sunset in Udaipur",
+        "Card 3: 'Shared Passions' - Long drives and old Hindi classics",
+        "Card 4: 'The Proposal' - Under the stars in Shimla",
+        "Card 5: 'Meeting the Families' - Laughter and endless chai",
+        "Card 6: 'Forever Begins' - Counting down to October 25, 2026",
+        "Touch swipe support, left/right arrow buttons, and active dot indicators"
+      ]
+    },
+    "5_wedding_journey": {
+      "title": "Wedding Journey (3 Events Timeline)",
+      "elements": [
+        "Header: 'THE WEDDING JOURNEY'",
+        "Vertical timeline with watercolour floral badges for 3 curated events:",
+        "Event 1: Mehandi & Haldi — Oct 24, 2026 | 11:00 AM | Poolside Lawn | Attire: Sun-kissed Yellows & Floral Lehengas",
+        "Event 2: Cocktail & Ring Ceremony — Oct 24, 2026 | 7:00 PM | Grand Ballroom | Attire: Indo-Western Glamour & Velvet Tuxedos",
+        "Event 3: Baraat & Pheras — Oct 25, 2026 | 4:00 PM | Royal Pavilion | Attire: Traditional Royal Ethnic & Silk Sarees/Sherwanis"
+      ]
+    },
+    "6_wardrobe_planner": {
+      "title": "Wardrobe Planner ('WHAT TO WEAR')",
+      "elements": [
+        "Header: 'WHAT TO WEAR'",
+        "Style guide cards with outfit recommendations and color swatch badges (Marigold Yellow, Emerald Green, Royal Crimson, Antique Gold)",
+        "Dresses & Suits suggestions for Groom & Bride side guests",
+        "Interactive color palette inspector for each event"
+      ]
+    },
+    "7_venue_and_directions": {
+      "title": "Venue & Directions ('WHERE WE CELEBRATE')",
+      "elements": [
+        "Header: 'WHERE WE CELEBRATE'",
+        "Hotel Trident, Taj East Gate Road, Fatehabad Rd, Agra, Uttar Pradesh",
+        "Responsive Google Maps iframe embed",
+        "GET DIRECTIONS button launching Google Maps navigation in new tab"
+      ]
+    },
+    "8_rsvp_modal": {
+      "title": "RSVP Experience",
+      "elements": [
+        "Header: 'RSVP FOR THE CELEBRATION'",
+        "Form fields: Full Name, Email/Phone, Attendance Status (Joyfully Accept / Regretfully Decline), Number of Guests, Event Choices (Haldi/Mehandi, Cocktail, Pheras), Dietary Preferences, Personal Blessings for Arushi & Piyush",
+        "Instant Sonner toast confirmation + confetti animation on submission",
+        "Store RSVP responses locally for persistence and show attendance count summary"
+      ]
+    },
+    "9_closing_blessing": {
+      "title": "Closing Blessing Screen",
+      "elements": [
+        "Traditional Sanskrit & English blessing: 'May your presence shower love and grace upon our new beginning.'",
+        "Warm regards from Sharma & Verma Families",
+        "Subtle animated lotus / temple bell watermark"
+      ]
+    },
+    "10_audio_and_petals": {
+      "title": "Floating Music Toggle & Petal Animation",
+      "elements": [
+        "Floating ♪ Music Button that controls royalty-free Indian classical instrumental / Shehnai ambient music",
+        "Floating Marigold & Jasmine petal canvas animation floating gently down the screen",
+        "Mute/Unmute state with visual audio equalizer waves animation"
+      ]
+    }
+  },
+  "image_urls": {
+    "couple_hero": "https://images.unsplash.com/photo-1744804298565-a25360f791ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjB3ZWRkaW5nJTIwY291cGxlJTIwd2F0ZXJjb2xvciUyMGJvdGFuaWNhbCUyMGZsb3dlcnMlMjBtYXJpZ29sZCUyMGphc21pbmV8ZW58MHx8fHwxNzg4NzY0MDI1fDA&ixlib=rb-4.1.0&q=85",
+    "couple_portrait": "https://images.unsplash.com/photo-1645856051845-f0ba9cd4efb5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHw0fHxpbmRpYW4lMjB3ZWRkaW5nJTIwY291cGxlJTIwd2F0ZXJjb2xvciUyMGJvdGFuaWNhbCUyMGZsb3dlcnMlMjBtYXJpZ29sZCUyMGphc21pbmV8ZW58MHx8fHwxNzg4NzY0MDI1fDA&ixlib=rb-4.1.0&q=85",
+    "bride_groom_royal": "https://images.unsplash.com/photo-1665960213508-48f07086d49c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBicmlkZSUyMGdyb29tJTIwdHJhZGl0aW9uYWwlMjBwYWxhY2UlMjBob3RlbCUyMHRyaWRlbnQlMjBhZ3JhfGVufDB8fHx8MTc4ODc2NDAyNXww&ixlib=rb-4.1.0&q=85",
+    "haldi_marigold": "https://images.unsplash.com/photo-1771992228816-e84f7d23b509?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwyfHxtYXJpZ29sZCUyMGZsb3dlcnMlMjB3YXRlcmNvbG9yJTIwaW5kaWFuJTIwd2VkZGluZyUyMGRlY29yYXRpb258ZW58MHx8fHwxNzg4NzY0MDI1fDA&ixlib=rb-4.1.0&q=85",
+    "mehandi_henna": "https://images.unsplash.com/photo-1771992226177-759e116e72f4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHw0fHxtYXJpZ29sZCUyMGZsb3dlcnMlMjB3YXRlcmNvbG9yJTIwaW5kaWFuJTIwd2VkZGluZyUyMGRlY29yYXRpb258ZW58MHx8fHwxNzg4NzY0MDI1fDA&ixlib=rb-4.1.0&q=85",
+    "venue_hotel_trident": "https://images.unsplash.com/photo-1722952934661-dde241aeb591?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBicmlkZSUyMGdyb29tJTIwdHJhZGl0aW9uYWwlMjBwYWxhY2UlMjBob3RlbCUyMHRyaWRlbnQlMjBhZ3JhfGVufDB8fHx8MTc4ODc2NDAyNXww&ixlib=rb-4.1.0&q=85",
+    "cocktail_party": "https://images.unsplash.com/photo-1741441029103-97748be1bf39?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB3ZWRkaW5nJTIwY291cGxlJTIwd2F0ZXJjb2xvciUyMGJvdGFuaWNhbCUyMGZsb3dlcnMlMjBtYXJpZ29sZCUyMGphc21pbmV8ZW58MHx8fHwxNzg4NzY0MDI1fDA&ixlib=rb-4.1.0&q=85"
+  },
+  "instructions_to_main_agent": [
+    "Build a mobile-first single-page scrolling wedding invitation application in /app/frontend/src/App.js with sub-components in /app/frontend/src/components/.",
+    "Ensure all interactive elements have data-testid attributes (e.g. data-testid='music-toggle-button', data-testid='rsvp-open-modal-button', data-testid='rsvp-submit-button', data-testid='carousel-next-button', data-testid='get-directions-button').",
+    "Include floating petal/marigold animation using canvas or framer-motion particles.",
+    "Include a working music player toggle button with fallback royalty-free ambient audio or simulated web audio API shehnai/flute melody.",
+    "Style using Tailwind CSS with custom font imports for Cormorant Garamond and Cinzel.",
+    "Include Sonner toast notifications when RSVP is submitted.",
+    "Do NOT use generic Vercel or Bootstrap cards. Use customized gold bordered paper textured containers.",
+    "Ensure all section requirements listed in problem statement are strictly implemented."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Never use pure black #000000; use warm charcoal #262626.",
+    "Never use default Inter for H1/H2 titles; use Cormorant Garamond / Cinzel.",
+    "Every interactive button must have hover effects and data-testid attributes.",
+    "Keep text contrast strictly AA compliant against warm ivory backgrounds.",
+    "No purple gradients or neon colors."
+  ]
+}

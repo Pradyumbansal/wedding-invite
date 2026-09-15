@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 0 0% 9%;
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
+        --accent: 0 0% 96.1%;
+        --accent-foreground: 0 0% 9%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+        --ring: 0 0% 3.9%;
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    background-color: #faf6f0;
+    color: #262626;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+
+::selection {
+    background: rgba(212, 175, 55, 0.45);
+    color: #262626;
+}
+
+.font-display {
+    font-family: "Cormorant Garamond", serif;
+}
+
+.font-name {
+    font-family: "Cinzel", serif;
+}
+
+.font-label {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+}
+
+.gold-frame {
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    box-shadow:
+        inset 0 0 0 5px #fdfbf7,
+        inset 0 0 0 6px rgba(212, 175, 55, 0.35),
+        0 14px 34px rgba(27, 59, 43, 0.07);
+}
+
+.gold-speckle {
+    background-image: radial-gradient(rgba(212, 175, 55, 0.28) 1px, transparent 1.4px);
+    background-size: 22px 22px;
+}
+
+@keyframes slow-zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.09);
+    }
+}
+
+@keyframes sway {
+    0%,
+    100% {
+        transform: rotate(-1.6deg);
+    }
+    50% {
+        transform: rotate(1.6deg);
+    }
+}
+
+@keyframes eq-bar {
+    0%,
+    100% {
+        height: 4px;
+    }
+    50% {
+        height: 13px;
+    }
+}
+
+@keyframes scroll-dot {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(26px);
+        opacity: 0;
+    }
+}
+
+.animate-slow-zoom {
+    animation: slow-zoom 18s ease-in-out infinite alternate;
+}
+
+.animate-sway {
+    animation: sway 8s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+.eq-bar {
+    display: inline-block;
+    width: 2.5px;
+    border-radius: 2px;
+    background: #b8860b;
+    animation: eq-bar 1s ease-in-out infinite;
+}
+
+.scroll-dot {
+    animation: scroll-dot 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-slow-zoom,
+    .animate-sway,
+    .eq-bar,
+    .scroll-dot {
+        animation: none;
+    }
+}

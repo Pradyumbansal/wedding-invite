@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <filter id="wc" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="17" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="15"/>
+    </filter>
+    <linearGradient id="silkE" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2C5238"/>
+      <stop offset="1" stop-color="#12301F"/>
+    </linearGradient>
+    <linearGradient id="silkM" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7A2A2A"/>
+      <stop offset="1" stop-color="#4A1414"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#wc)">
+    <path d="M90 300 Q300 190 560 250 Q700 290 710 430 Q700 600 520 660 Q260 720 120 580 Q40 440 90 300 Z" fill="url(#silkE)"/>
+    <path d="M120 340 Q340 260 640 330 M110 430 Q360 360 660 430 M140 520 Q380 460 620 520" fill="none" stroke="#7A9E7E" stroke-width="4" opacity="0.35"/>
+    <path d="M330 180 Q560 150 690 260 Q740 380 660 470 Q520 420 420 330 Q360 260 330 180 Z" fill="url(#silkM)" opacity="0.95"/>
+    <path d="M380 210 Q520 190 640 270 M420 280 Q540 260 650 330" fill="none" stroke="#C98070" stroke-width="3.5" opacity="0.4"/>
+    <g fill="#D4AF37" opacity="0.85">
+      <circle cx="200" cy="360" r="5"/><circle cx="260" cy="400" r="5"/><circle cx="200" cy="440" r="5"/>
+      <circle cx="320" cy="380" r="5"/><circle cx="320" cy="460" r="5"/><circle cx="440" cy="400" r="5"/>
+      <circle cx="440" cy="480" r="5"/><circle cx="260" cy="480" r="5"/><circle cx="560" cy="380" r="5"/>
+      <circle cx="560" cy="460" r="5"/><circle cx="150" cy="420" r="5"/><circle cx="380" cy="520" r="5"/>
+    </g>
+    <g>
+      <path d="M220 120 Q400 60 580 120" fill="none" stroke="#B8860B" stroke-width="5"/>
+      <g fill="#FDF8EC" stroke="#D4AF37" stroke-width="3">
+        <path d="M252 112 Q262 132 252 150 Q242 132 252 112 Z"/>
+        <path d="M316 98 Q326 120 316 138 Q306 120 316 98 Z"/>
+        <path d="M384 92 Q394 114 384 132 Q374 114 384 92 Z"/>
+        <path d="M452 98 Q462 120 452 138 Q442 120 452 98 Z"/>
+        <path d="M516 112 Q526 132 516 150 Q506 132 516 112 Z"/>
+      </g>
+    </g>
+    <g>
+      <rect x="586" y="560" width="34" height="34" rx="8" fill="#D4AF37" transform="rotate(12 603 577)"/>
+      <rect x="640" y="540" width="34" height="34" rx="8" fill="#B8860B" transform="rotate(-10 657 557)"/>
+      <circle cx="603" cy="577" r="7" fill="#7A2A2A"/><circle cx="657" cy="557" r="7" fill="#12301F"/>
+    </g>
+  </g>
+</svg>

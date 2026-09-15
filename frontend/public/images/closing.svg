@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520">
+  <defs>
+    <filter id="wc" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="21" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="16"/>
+    </filter>
+    <linearGradient id="leafB" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#1B3B2B"/>
+      <stop offset="1" stop-color="#5E9068"/>
+    </linearGradient>
+    <radialGradient id="mgB" cx="0.4" cy="0.35" r="0.9">
+      <stop offset="0" stop-color="#F2B84B"/>
+      <stop offset="1" stop-color="#D97706"/>
+    </radialGradient>
+    <linearGradient id="bellB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E7C568"/>
+      <stop offset="1" stop-color="#9A7212"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#wc)">
+    <path d="M40 520 Q60 300 200 220 Q150 340 150 520 Z" fill="url(#leafB)"/>
+    <path d="M150 520 Q200 330 340 260 Q270 380 260 520 Z" fill="#4A7A5C" opacity="0.9"/>
+    <path d="M280 520 Q340 380 460 330 Q390 430 380 520 Z" fill="#7A9E7E" opacity="0.8"/>
+    <path d="M1560 520 Q1540 300 1400 220 Q1450 340 1450 520 Z" fill="url(#leafB)"/>
+    <path d="M1450 520 Q1400 330 1260 260 Q1330 380 1340 520 Z" fill="#4A7A5C" opacity="0.9"/>
+    <path d="M1320 520 Q1260 380 1140 330 Q1210 430 1220 520 Z" fill="#7A9E7E" opacity="0.8"/>
+    <g>
+      <circle cx="560" cy="470" r="34" fill="url(#mgB)"/><circle cx="640" cy="440" r="38" fill="#E07A5F"/>
+      <circle cx="730" cy="462" r="36" fill="url(#mgB)"/><circle cx="820" cy="442" r="39" fill="#E8943A"/>
+      <circle cx="910" cy="468" r="35" fill="url(#mgB)"/><circle cx="990" cy="448" r="33" fill="#E07A5F"/>
+      <circle cx="480" cy="496" r="28" fill="#E8943A"/><circle cx="1060" cy="494" r="28" fill="url(#mgB)"/>
+    </g>
+    <g fill="#8A5A08" opacity="0.85">
+      <circle cx="560" cy="470" r="9"/><circle cx="640" cy="440" r="10"/><circle cx="730" cy="462" r="9"/>
+      <circle cx="820" cy="442" r="10"/><circle cx="910" cy="468" r="9"/><circle cx="990" cy="448" r="9"/>
+    </g>
+    <path d="M300 520 Q800 380 1300 520" fill="none" stroke="#B9CBA8" stroke-width="3" opacity="0.55"/>
+    <g fill="#FFFDF5" stroke="#D9D2B8" stroke-width="1">
+      <circle cx="420" cy="488" r="8"/><circle cx="540" cy="452" r="8"/><circle cx="690" cy="428" r="8"/>
+      <circle cx="800" cy="420" r="9"/><circle cx="910" cy="428" r="8"/><circle cx="1060" cy="452" r="8"/><circle cx="1180" cy="488" r="8"/>
+    </g>
+    <g>
+      <line x1="430" y1="330" x2="430" y2="392" stroke="#9A7212" stroke-width="3"/>
+      <path d="M415 392 Q430 382 445 392 L449 420 Q430 432 411 420 Z" fill="url(#bellB)"/>
+      <circle cx="430" cy="428" r="5" fill="#9A7212"/>
+      <line x1="1170" y1="330" x2="1170" y2="392" stroke="#9A7212" stroke-width="3"/>
+      <path d="M1155 392 Q1170 382 1185 392 L1189 420 Q1170 432 1151 420 Z" fill="url(#bellB)"/>
+      <circle cx="1170" cy="428" r="5" fill="#9A7212"/>
+    </g>
+  </g>
+</svg>
