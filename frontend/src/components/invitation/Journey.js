@@ -3,7 +3,7 @@ import { INVITATION } from "@/config/invitation";
 
 export default function Journey() {
   return (
-    <section data-testid="journey-section" className="relative px-4 py-20 sm:py-28">
+    <section id="journey" data-testid="journey-section" className="relative px-4 py-20 sm:py-28">
       <div className="mx-auto max-w-4xl">
         <Reveal>
           <SectionHead

@@ -4,12 +4,11 @@ export const INVITATION = {
   couple: {
     bride: "ARUSHI",
     groom: "PIYUSH",
-    hosts: "Smt. & Shri Vijay Singh Gahlot",
+    hosts: "Smt. & Shri Rajendra Madnani",
     brideParents: "Surabhi & Rajiv Gahlot",
     groomParents: "Smt. Sunita & Rajendra Madnani",
     groomHome: "Agra",
-    // Replace with the couple's real photograph, e.g. "/images/couple-photo.jpg"
-    photo: "/images/decor-feet.jpg",
+    photo: "/images/welcome-art.jpg",
   },
 
   wedding: {
@@ -30,7 +29,8 @@ export const INVITATION = {
   },
 
   images: {
-    heroFrame: "/images/hero-frame.svg",
+    heroBackground: "/images/hero-background.jpg",
+    invitationBackground: "/images/invitation-background.jpg",
     closing: "/images/closing.svg",
   },
 
@@ -51,7 +51,7 @@ export const INVITATION = {
       time: "12:00 NOON",
       title: "MEHANDI & HALDI",
       venue: ["Hotel Trident (The Oberoi Group)", "Fatehabad Road, Agra"],
-      image: "/images/event-mehandi.png",
+      image: "/images/journey-event-1.jpg",
     },
     {
       id: "cocktail",
@@ -61,7 +61,7 @@ export const INVITATION = {
       time: "07:00 PM",
       title: "COCKTAIL & RING CEREMONY",
       venue: ["Hotel Trident (The Oberoi Group)", "Fatehabad Road, Agra"],
-      image: "/images/event-cocktail.png",
+      image: "/images/journey-event-2.jpg",
     },
     {
       id: "wedding",
@@ -71,47 +71,40 @@ export const INVITATION = {
       time: "11:00 AM",
       title: "BARAAT & PHERE",
       venue: ["Hotel Trident (The Oberoi Group)", "Fatehabad Road, Agra"],
-      image: "/images/event-wedding.svg",
+      image: "/images/journey-event-3.jpg",
     },
   ],
 
-  // Placeholder chapters — replace text/image with the couple's real story.
   story: [
     {
       num: "01",
       title: "THE BEGINNING",
-      text: "Every beautiful story has a quiet first page. Ours is waiting to be written here — replace this with how it truly began.",
+      text: "Every beautiful story has a quiet first page. Ours began when our eyes met at the chai ki thadi in front of the college on the very first day.",
       image: "/images/story-1.png",
     },
     {
       num: "02",
       title: "THE FIRST CHAPTER",
-      text: "A first conversation, a first hello. Add the memory that started it all.",
-      image: "/images/story-2.png",
+      text: "The guy tried to look cool with long, wavy hair, rapping to impress, while the girl made fun of him — and the rest is history.",
+      image: "/images/story-new-02.jpg",
     },
     {
       num: "03",
       title: "THE JOURNEY",
-      text: "Roads travelled, cities wandered, laughter collected along the way. Add your favourite journey together.",
+      text: "From Agra to Meerut, Bangalore to Mumbai, and Noida to Delhi — physically apart, but emotionally closer every day.",
       image: "/images/story-3.png",
     },
     {
       num: "04",
       title: "THE LITTLE MOMENTS",
-      text: "The in-between moments that became everything. Add yours here.",
-      image: "/images/story-4.svg",
+      text: "In the age of WhatsApp, they shared handwritten letters for years, with every word creating the story of a lifetime.",
+      image: "/images/story-2.png",
     },
     {
       num: "05",
       title: "THE PROMISE",
-      text: "A question asked, a promise made. Replace this with the story of the yes.",
-      image: "/images/story-5.svg",
-    },
-    {
-      num: "06",
-      title: "FOREVER BEGINS",
-      text: "And now, forever begins — Sunday, October 25, 2026, surrounded by everyone we love.",
-      image: "/images/story-6.png",
+      text: "She said yes without him ever having to ask the question.",
+      image: "/images/story-new-05.jpg",
     },
   ],
 

@@ -19,7 +19,7 @@ export default function Story() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section data-testid="story-section" className="relative overflow-hidden py-20 sm:py-28">
+    <section id="story" data-testid="story-section" className="relative overflow-hidden py-20 sm:py-28">
       <div className="mx-auto max-w-5xl px-4">
         <Reveal>
           <SectionHead
