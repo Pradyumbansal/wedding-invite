@@ -39,8 +39,8 @@ export const INVITATION = {
   //              When null, a gentle generated Indian classical ambience plays.
   //   startAt  — seconds into the track to begin, and to loop back to. 210 = 3:30.
   //   autoplay — begin as soon as the browser permits. Browsers block un-gestured
-  //              audio, so MusicToggle also starts on the visitor's first tap/scroll.
-  music: { src: null, startAt: 210, autoplay: true, volume: 0.45 },
+  //              audio, so MusicToggle also starts on the visitor's first tap/click.
+  music: { src: "/audio/tamil-wedding.mp3", startAt: 210, autoplay: true, volume: 0.45 },
 
   events: [
     {

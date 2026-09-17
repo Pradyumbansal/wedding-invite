@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Music, VolumeX } from "lucide-react";
+import { toast } from "sonner";
 import { INVITATION } from "@/config/invitation";
 
 const SCALE = [293.66, 329.63, 369.99, 415.3, 440, 493.88, 554.37];
@@ -67,14 +68,28 @@ function createAmbience() {
 
 // Browsers refuse to start audio until the visitor interacts with the page,
 // so a blocked autoplay attempt is retried on the first of these events.
-const GESTURES = ["pointerdown", "touchstart", "keydown", "click", "scroll"];
+const GESTURES = ["pointerdown", "touchend", "keydown", "click"];
 
 export default function MusicToggle() {
   const { src, startAt = 0, autoplay = false, volume = 0.45 } = INVITATION.music;
   const [playing, setPlaying] = useState(false);
+  const [waiting, setWaiting] = useState(autoplay);
   const synthRef = useRef(null);
   const audioRef = useRef(null);
   const fallbackToSynth = useRef(!src);
+  const playbackGeneration = useRef(0);
+  const autoplayPending = useRef(autoplay);
+
+  const handlePlaybackError = useCallback((error) => {
+    setPlaying(false);
+    if (error.name === "NotAllowedError") {
+      setWaiting(true);
+      return;
+    }
+    setWaiting(false);
+    console.error("Unable to start invitation music", error);
+    toast.error("Music could not start. Please tap the music button to try again.");
+  }, []);
 
   // Seek to startAt, or to 0 if the track is shorter than that offset.
   const seekToStart = useCallback(
@@ -108,62 +123,94 @@ export default function MusicToggle() {
   }, [src, volume, seekToStart]);
 
   const startPlayback = useCallback(async () => {
+    const generation = playbackGeneration.current;
     if (src && !fallbackToSynth.current) {
       const a = ensureAudio();
       if (a.readyState > 0) seekToStart(a);
       await a.play(); // rejects when the browser blocks un-gestured audio
+      if (generation !== playbackGeneration.current) return;
+      autoplayPending.current = false;
+      setWaiting(false);
       setPlaying(true);
       return;
     }
     const inst = synthRef.current ?? createAmbience();
     synthRef.current = inst;
     if (inst.ctx.state === "suspended") await inst.ctx.resume();
+    if (generation !== playbackGeneration.current) return;
     if (inst.ctx.state !== "running") throw new Error("audio blocked");
+    autoplayPending.current = false;
+    setWaiting(false);
     setPlaying(true);
   }, [src, ensureAudio, seekToStart]);
 
   const stopPlayback = useCallback(() => {
+    playbackGeneration.current += 1;
+    autoplayPending.current = false;
     if (audioRef.current) audioRef.current.pause();
     if (synthRef.current) {
       synthRef.current.stop();
       synthRef.current = null;
     }
     setPlaying(false);
+    setWaiting(false);
   }, []);
 
   useEffect(() => {
     if (!autoplay) return undefined;
     let cancelled = false;
-    const onGesture = () => {
-      detach();
-      startPlayback().catch(() => {});
+    autoplayPending.current = true;
+    const attemptPlayback = () => {
+      const generation = playbackGeneration.current;
+      startPlayback().catch((error) => {
+        if (!cancelled && generation === playbackGeneration.current) {
+          handlePlaybackError(error);
+        }
+      });
+    };
+    const onGesture = (event) => {
+      if (!autoplayPending.current) return;
+      if (event.target instanceof Element &&
+          event.target.closest('[data-testid="music-toggle-button"]')) return;
+      attemptPlayback();
     };
     const detach = () => GESTURES.forEach((e) => window.removeEventListener(e, onGesture));
 
-    startPlayback().catch(() => {
-      if (cancelled) return;
-      GESTURES.forEach((e) =>
-        window.addEventListener(e, onGesture, { once: true, passive: true })
-      );
-    });
+    // resume() can stay pending until a gesture rather than rejecting autoplay.
+    GESTURES.forEach((e) =>
+      window.addEventListener(e, onGesture, { passive: true })
+    );
+    attemptPlayback();
 
     return () => {
       cancelled = true;
       detach();
     };
-  }, [autoplay, startPlayback]);
+  }, [autoplay, startPlayback, handlePlaybackError]);
 
   useEffect(
     () => () => {
-      if (synthRef.current) synthRef.current.stop();
-      if (audioRef.current) audioRef.current.pause();
+      playbackGeneration.current += 1;
+      if (synthRef.current) {
+        synthRef.current.stop();
+        synthRef.current = null;
+      }
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
     },
     []
   );
 
   const toggle = () => {
     if (playing) stopPlayback();
-    else startPlayback().catch(() => {});
+    else {
+      const generation = playbackGeneration.current;
+      startPlayback().catch((error) => {
+        if (generation === playbackGeneration.current) handlePlaybackError(error);
+      });
+    }
   };
 
   return (
@@ -185,7 +232,7 @@ export default function MusicToggle() {
         <VolumeX size={15} className="text-[#B8860B]" aria-hidden="true" />
       )}
       <span className="font-label text-[9px] text-[#1B3B2B]">
-        {playing ? "PLAYING" : "MUSIC"}
+        {playing ? "PLAYING" : waiting ? "TAP FOR MUSIC" : "MUSIC"}
       </span>
       <Music size={13} className="text-[#B8860B]" aria-hidden="true" />
     </button>
