@@ -48,7 +48,7 @@ export const INVITATION = {
       num: "01",
       day: "SATURDAY",
       date: "OCTOBER 24, 2026",
-      time: "12:00 NOON",
+      time: "12:30 PM",
       title: "MEHANDI & HALDI",
       venue: ["Hotel Trident (The Oberoi Group)", "Fatehabad Road, Agra"],
       image: "/images/journey-event-1.jpg",
@@ -97,7 +97,7 @@ export const INVITATION = {
     {
       num: "04",
       title: "THE LITTLE MOMENTS",
-      text: "In the age of WhatsApp, they shared handwritten letters for years, with every word creating the story of a lifetime.",
+      text: "In the age of WhatsApp, we shared handwritten letters for years, with every word creating the story of a lifetime.",
       image: "/images/story-2.png",
     },
     {
@@ -127,7 +127,7 @@ export const INVITATION = {
       theme: "BOOGIE WOOGIE",
       dressCode: "CHATAK CHAMKEELA",
       image: "/images/wardrobe-sangeet.jpg",
-      palette: ["#E0115F", "#FF7A00", "#00A0B0", "#FFD700"],
+      palette: ["#262626", "#FAF6F0", "#5C1A1B", "#8A8A8A"],
     },
     {
       id: "wedding",
@@ -137,7 +137,7 @@ export const INVITATION = {
       theme: "LAGAN LAAGI RE",
       dressCode: "SASSY & CLASSY",
       image: "/images/wardrobe-wedding.jpg",
-      palette: ["#5C1A1B", "#1B3B2B", "#D4AF37", "#262626"],
+      palette: ["#C53030", "#E8943A", "#D4AF37", "#4A7A5C", "#2E6E8E"],
     },
   ],
 };

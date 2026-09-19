@@ -36,7 +36,7 @@ export default function Journey() {
                       src={ev.image}
                       alt={ev.title}
                       loading="lazy"
-                      className="aspect-[16/10] w-full object-cover"
+                      className="h-auto w-full bg-[#FAF6F0]"
                     />
                   </div>
                   <p className="font-label mt-6 text-[10px] text-[#D4AF37]">EVENT {ev.num}</p>
